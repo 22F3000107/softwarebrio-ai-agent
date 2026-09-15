@@ -2,11 +2,11 @@
   {
     "domain": "https://postman.com",
     "intelligence": {
-      "company_overview": "Postman is an API platform for building and using APIs. It streamlines each step of the API lifecycle and enables faster collaboration.",
+      "company_overview": "Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster.",
       "target_audience": [
-        "Individual developers",
-        "Team developers",
-        "Enterprise teams"
+        "Individuals",
+        "Teams",
+        "Enterprises"
       ],
       "contact_points": [
         {
@@ -25,19 +25,7 @@
       "leadership_team": [
         {
           "name": "Abhinav Asthana",
-          "role": "CEO and co-founder",
-          "linkedin_url": null,
-          "source_url": "https://www.postman.com/company/about-postman/"
-        },
-        {
-          "name": "Ankit Sobti",
-          "role": "Co-founder",
-          "linkedin_url": null,
-          "source_url": "https://www.postman.com/company/about-postman/"
-        },
-        {
-          "name": "Abhijit Kane",
-          "role": "Co-founder",
+          "role": "CEO and Co-founder",
           "linkedin_url": null,
           "source_url": "https://www.postman.com/company/about-postman/"
         }
@@ -53,12 +41,12 @@
   {
     "domain": "https://supabase.com",
     "intelligence": {
-      "company_overview": "Supabase provides an open‑source backend platform that offers a Postgres database with built‑in authentication, storage, real‑time APIs, and edge functions. It enables developers to build and scale applications without managing infrastructure.",
+      "company_overview": "Supabase provides an open-source platform that offers developers a Postgres-based backend with built-in authentication, storage, real‑time, and serverless functions. It simplifies building and scaling web and mobile applications by integrating ready‑to‑use APIs and enterprise‑grade security.",
       "target_audience": [
-        "Developers",
-        "Startup founders",
-        "Innovation teams in enterprises",
-        "AI developers"
+        "AI builders",
+        "innovation teams",
+        "SaaS developers",
+        "fast‑growing companies"
       ],
       "contact_points": [
         {
@@ -94,12 +82,12 @@
   {
     "domain": "https://vapi.ai",
     "intelligence": {
-      "company_overview": "Vapi provides a unified platform that lets builders create, deploy, and manage advanced voice AI agents. The platform offers enterprise‑grade features such as scalability, security compliance (SOC 2, HIPAA, PCI), and integrated telephony and monitoring tools.",
+      "company_overview": "Vapi is a platform that lets builders create, deploy, and manage voice AI agents. It offers orchestration, real-time monitoring, and enterprise-grade features for scalable voice interactions.",
       "target_audience": [
-        "Voice AI developers and builders",
-        "Enterprise teams deploying voice agents",
-        "Customer support operations using voice automation",
-        "Lead qualification and appointment scheduling teams"
+        "Developers/Builders",
+        "Early-stage Teams",
+        "Scaling Teams in Production",
+        "Enterprise Customers"
       ],
       "contact_points": [],
       "leadership_team": [],

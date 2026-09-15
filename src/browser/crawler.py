@@ -14,6 +14,7 @@ RELEVANT_KEYWORDS = [
     "pricing",
 ]
 
+MAX_RELEVANT_PAGES = 10
 
 def discover_relevant_links(page, base_url: str) -> list[str]:
     """
@@ -59,7 +60,7 @@ def discover_relevant_links(page, base_url: str) -> list[str]:
             if clean_url not in relevant_links:
                 relevant_links.append(clean_url)
 
-    return relevant_links
+    return relevant_links[:MAX_RELEVANT_PAGES]
 
 
 def crawl_page(page, url: str) -> dict:
@@ -177,13 +178,66 @@ def crawl_website(base_url: str) -> dict:
 
         try:
             # 1. Load homepage for link discovery
-            page.goto(
-                base_url,
-                wait_until="domcontentloaded",
-                timeout=30000
-        )
+            try:
+                response = page.goto(
+                    base_url,
+                    wait_until="domcontentloaded",
+                    timeout=30000
+                )
 
-            page.wait_for_timeout(2000)
+                if response is None:
+                    return {
+                        "base_url": base_url,
+                        "pages": [
+                            {
+                                "url": base_url,
+                                "title": "",
+                                "content": "",
+                                "error": "No response received",
+                            }
+                        ],
+                    }
+
+                if response.status >= 400:
+                    return {
+                        "base_url": base_url,
+                        "pages": [
+                            {
+                                "url": base_url,
+                                "title": "",
+                                "content": "",
+                                "error": f"HTTP {response.status}",
+                            }
+                        ],
+                    }
+
+                page.wait_for_timeout(2000)
+
+            except PlaywrightTimeoutError:
+                return {
+                    "base_url": base_url,
+                    "pages": [
+                        {
+                            "url": base_url,
+                            "title": "",
+                            "content": "",
+                            "error": "Homepage load timeout",
+                        }
+                    ],
+                }
+
+            except Exception as e:
+                return {
+                    "base_url": base_url,
+                    "pages": [
+                        {
+                            "url": base_url,
+                            "title": "",
+                            "content": "",
+                            "error": str(e),
+                        }
+                    ],
+                }
 
             # 2. Discover relevant internal links BEFORE cleaning the page
             relevant_links = discover_relevant_links(
