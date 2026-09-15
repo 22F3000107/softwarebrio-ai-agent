@@ -1,4 +1,3 @@
-````markdown
 # Autonomous Lead Enrichment Agent
 
 A Python-based autonomous lead enrichment agent that crawls public company websites, discovers relevant internal pages, cleans webpage content, and uses an LLM to extract structured company intelligence.
@@ -24,7 +23,7 @@ A Python-based autonomous lead enrichment agent that crawls public company websi
 
 ## Architecture
 
-```text
+```
 Input Domains
      |
      v
@@ -73,27 +72,32 @@ softwarebrio-ai-agent/
 ├── main.py
 ├── requirements.txt
 ├── README.md
+├── .env.example
 ├── .gitignore
-├── src/
-│   ├── browser/
-│   │   └── crawler.py
-│   ├── extraction/
-│   │   └── content_cleaner.py
-│   ├── llm/
-│   │   └── extractor.py
-│   ├── models/
-│   │   └── schemas.py
-│   └── utils/
-│       └── logger.py
-└── outputs/
-    ├── enrichment_results.json
-    └── enrichment_results.csv
+├── samples/
+│   ├── sample_enrichment_results.json
+│   └── sample_enrichment_results.csv
+└── src/
+    ├── browser/
+    │   └── crawler.py
+    ├── extraction/
+    │   └── content_cleaner.py
+    ├── llm/
+    │   └── extractor.py
+    ├── models/
+    │   └── schemas.py
+    └── utils/
+        └── logger.py
 ```
 
 ## Requirements
 
 * Python 3.12+
 * Playwright
+* Pydantic
+* python-dotenv
+* Groq
+* Tenacity
 * Groq API key
 
 ## Installation
@@ -101,7 +105,7 @@ softwarebrio-ai-agent/
 ### 1. Clone the repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/22F3000107/softwarebrio-ai-agent.git
 cd softwarebrio-ai-agent
 ```
 
@@ -140,6 +144,8 @@ GROQ_API_KEY=your_groq_api_key
 GROQ_INPUT_COST_PER_MILLION_TOKENS=0.075
 ```
 
+A template is also provided in `.env.example`.
+
 The API key should never be committed to GitHub.
 
 ## Usage
@@ -160,14 +166,23 @@ The pipeline processes each company independently. If one domain fails, the agen
 
 ## Output
 
-The agent generates:
+Runtime results are generated locally in:
 
 ```text
 outputs/enrichment_results.json
 outputs/enrichment_results.csv
 ```
 
-Each company contains:
+The `outputs/` directory is ignored by Git.
+
+Sample results for the three required test domains are included in:
+
+```text
+samples/sample_enrichment_results.json
+samples/sample_enrichment_results.csv
+```
+
+Each company result contains:
 
 * Company overview
 * Target audience / ICP
@@ -303,13 +318,3 @@ Potential extensions include:
 * Exact tokenizer-based cost tracking
 * More sophisticated page prioritization
 * Additional anti-bot and retry strategies
-
-
-
-
-
-
-
-
-
-
