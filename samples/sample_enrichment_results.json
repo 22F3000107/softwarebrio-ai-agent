@@ -1,0 +1,114 @@
+[
+  {
+    "domain": "https://postman.com",
+    "intelligence": {
+      "company_overview": "Postman is an API platform for building and using APIs. It streamlines each step of the API lifecycle and enables faster collaboration.",
+      "target_audience": [
+        "Individual developers",
+        "Team developers",
+        "Enterprise teams"
+      ],
+      "contact_points": [
+        {
+          "email": "info-jp@postman.com",
+          "source_url": "https://www.postman.com/company/about-postman/"
+        },
+        {
+          "email": "info@postman.com",
+          "source_url": "https://www.postman.com/company/about-postman/"
+        },
+        {
+          "email": "help@postman.com",
+          "source_url": "https://www.postman.com/company/contact-sales/"
+        }
+      ],
+      "leadership_team": [
+        {
+          "name": "Abhinav Asthana",
+          "role": "CEO and co-founder",
+          "linkedin_url": null,
+          "source_url": "https://www.postman.com/company/about-postman/"
+        },
+        {
+          "name": "Ankit Sobti",
+          "role": "Co-founder",
+          "linkedin_url": null,
+          "source_url": "https://www.postman.com/company/about-postman/"
+        },
+        {
+          "name": "Abhijit Kane",
+          "role": "Co-founder",
+          "linkedin_url": null,
+          "source_url": "https://www.postman.com/company/about-postman/"
+        }
+      ],
+      "confidence_score": 1.0
+    },
+    "processing": {
+      "input_characters": 9000,
+      "estimated_input_tokens": 2250,
+      "estimated_input_cost_usd": 0.00016874999999999998
+    }
+  },
+  {
+    "domain": "https://supabase.com",
+    "intelligence": {
+      "company_overview": "Supabase provides an open‑source backend platform that offers a Postgres database with built‑in authentication, storage, real‑time APIs, and edge functions. It enables developers to build and scale applications without managing infrastructure.",
+      "target_audience": [
+        "Developers",
+        "Startup founders",
+        "Innovation teams in enterprises",
+        "AI developers"
+      ],
+      "contact_points": [
+        {
+          "email": "abuse@supabase.com",
+          "source_url": "https://supabase.com/contact-us"
+        },
+        {
+          "email": "help-events@supabase.com",
+          "source_url": "https://supabase.com/contact-us"
+        },
+        {
+          "email": "legal@supabase.com",
+          "source_url": "https://supabase.com/contact-us"
+        },
+        {
+          "email": "privacy@supabase.com",
+          "source_url": "https://supabase.com/contact-us"
+        },
+        {
+          "email": "security@supabase.com",
+          "source_url": "https://supabase.com/contact-us"
+        }
+      ],
+      "leadership_team": [],
+      "confidence_score": 0.75
+    },
+    "processing": {
+      "input_characters": 9000,
+      "estimated_input_tokens": 2250,
+      "estimated_input_cost_usd": 0.00016874999999999998
+    }
+  },
+  {
+    "domain": "https://vapi.ai",
+    "intelligence": {
+      "company_overview": "Vapi provides a unified platform that lets builders create, deploy, and manage advanced voice AI agents. The platform offers enterprise‑grade features such as scalability, security compliance (SOC 2, HIPAA, PCI), and integrated telephony and monitoring tools.",
+      "target_audience": [
+        "Voice AI developers and builders",
+        "Enterprise teams deploying voice agents",
+        "Customer support operations using voice automation",
+        "Lead qualification and appointment scheduling teams"
+      ],
+      "contact_points": [],
+      "leadership_team": [],
+      "confidence_score": 0.45
+    },
+    "processing": {
+      "input_characters": 8539,
+      "estimated_input_tokens": 2134,
+      "estimated_input_cost_usd": 0.00016005
+    }
+  }
+]
